@@ -81,5 +81,13 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
             });
             // push object into cart which has product name and quantity
         }
+
+        let cartQuantity=0;
+        cart.forEach((item)=>{
+            cartQuantity += item.quantity;
+        });
+
+        //update quantity for cart and display on page
+        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
     });
 })
